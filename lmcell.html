@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Sorteios Online - Sorteio ao Vivo</title>
+    <style>
+        body {
+            background-color: #f2f6fc;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+        header img {
+            height: 50px;
+            vertical-align: middle;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #loading {
+            font-size: 20px;
+            color: #ff9900;
+            margin-top: 20px;
+            display: none;
+        }
+        #resultado {
+            font-size: 48px;
+            color: #dc3545;
+            margin-top: 30px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.imgur.com/Lj7N6Xf.png" alt="Mega Sorteios Logo"> <!-- Logo fake hospedada -->
+    <h1>Mega Sorteios Online</h1>
+</header>
+
+<div class="container">
+    <p>Sorteio de número entre <strong>1 e 30000</strong>.</p>
+    <p>Boa sorte aos participantes!</p>
+    <button onclick="sortear()">Sortear Número</button>
+    <div id="loading">Sorteando número... Aguarde...</div>
+    <div id="resultado"></div>
+</div>
+
+<footer>© 2025 Mega Sorteios Online. Todos os direitos reservados.</footer>
+
+<script>
+    function sortear() {
+        document.getElementById('resultado').innerHTML = "";
+        document.getElementById('loading').style.display = "block";
+
+        setTimeout(function() {
+            document.getElementById('loading').style.display = "none";
+            const numeroSorteado = 14000;  // Número fixo da pegadinha 😄
+            document.getElementById('resultado').innerHTML = "Número Sorteado: <strong>" + numeroSorteado + "</strong>";
+        }, 3000); // 3 segundos pra parecer real
+    }
+</script>
+
+</body>
+</html>
